@@ -1,4 +1,33 @@
-# Logs
+dist
+dist-ssr
+*.local
+
+# ================================
+# DEPENDENCIES
+# ================================
+node_modules
+/.pnp
+.pnp.js
+
+# ================================
+# BUILD / PRODUCTION
+# ================================
+/client/build
+/client/dist
+/server/dist
+
+# ================================
+# ENVIRONMENT VARIABLES
+# ================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ================================
+# LOGS
+# ================================
 logs
 *.log
 npm-debug.log*
@@ -7,18 +36,42 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# ================================
+# OS FILES
+# ================================
+.DS_Store
+Thumbs.db
+desktop.ini
 
-# Editor directories and files
+# ================================
+# IDE / EDITOR
+# ================================
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
+*.swp
+*.swo
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*~
+
+# ================================
+# TESTING / COVERAGE
+# ================================
+coverage/
+*.lcov
+
+# ================================
+# DOCKER
+# ================================
+# Ignore les overrides locaux, pas le docker-compose principal
+docker-compose.override.yml
+
+# ================================
+# MISC
+# ================================
+*.tgz
+.cache/
