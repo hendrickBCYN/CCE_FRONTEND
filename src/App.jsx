@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import AuthProvider from "./context/AuthProvider";
 import LoginPage from "./components/auth/LoginPage";
+import LoadingScreen from "./components/common/LoadingScreen";
+import Header from "./components/layout/Header";
 
 const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 
@@ -30,11 +32,22 @@ function App() {
             <Route
               path="/configurator"
               element={
+                <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
+                  <Header />
+                  <div style={{ flex: 1, position: "relative" }}>
+                    <LoadingScreen message="Chargement du configurateur..." progress={42} />
+                  </div>
+                </div>
+              }
+              /*
+              path="/configurator"
+              element={
                 <div style={{ padding: "2rem", textAlign: "center" }}>
                   <h1>Configurateur</h1>
                   <p>Le build Unity WebGL sera intégré ici.</p>
                 </div>
               }
+              */
             />
 
             {/* Toute autre URL → login */}
