@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import AuthContext from "./AuthContext";
 import authService from "../services/authService";
 
@@ -11,11 +11,21 @@ import authService from "../services/authService";
  *  2. Si oui, demande au backend s'il est encore valide
  *  3. Si valide → restaure la session | Si invalide → nettoie le token
  */
+// ──── TEMPORAIRE POUR TEST ──────────────────────────────────
 export default function AuthProvider({ children }) {
-  const [user, setUser] = useState(null);
-  const [token, setToken] = useState(localStorage.getItem("cce_token"));
-  const [loading, setLoading] = useState(true);
+  // const [user, setUser] = useState(null); 
+  const [user, setUser] = useState({
+    email: "hendrickl.unity@gmail.com",
+    display_name: "Hendrick",
+    avatar_url: null,
+  });
+  // const [token, setToken] = useState(localStorage.getItem("cce_token"));
+  const [token, setToken] = useState("fake-token-for-testing");
+  // const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(false);
 
+
+  /* ──── TEMPORAIRE POUR TEST ──────────────────────────────────
   // Vérification du token au chargement
   useEffect(() => {
     const verifyToken = async () => {
@@ -33,6 +43,7 @@ export default function AuthProvider({ children }) {
     };
     verifyToken();
   }, [token]);
+  */
 
   /**
    * Appelée après le consentement Google réussi.
@@ -63,7 +74,7 @@ export default function AuthProvider({ children }) {
       value={{
         user,
         token,
-        loading,
+        // loading,
         isAuthenticated: !!user && !!token,
         loginWithGoogle,
         logout,

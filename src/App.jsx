@@ -2,9 +2,9 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import AuthProvider from "./context/AuthProvider";
 import LoginPage from "./components/auth/LoginPage";
-import LoadingScreen from "./components/common/LoadingScreen";
 import Header from "./components/layout/Header";
 import ProtectedRoute from "./components/layout/ProtectedRoute";
+import ConfiguratorPage from "./components/configurator/ConfiguratorPage";
 
 const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 
@@ -28,17 +28,13 @@ function App() {
         <Router>
           <Routes>
             <Route path="/login" element={<LoginPage />} />
-
-            {/* Placeholder pour le configurateur — on l'implémentera à l'étape suivante */}
             <Route
               path="/configurator"
               element={
                 <ProtectedRoute>
                   <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
                     <Header />
-                    <div style={{ flex: 1, position: "relative" }}>
-                      <LoadingScreen message="Chargement du configurateur..." progress={42} />
-                    </div>
+                    <ConfiguratorPage />
                   </div>
                 </ProtectedRoute>
               }

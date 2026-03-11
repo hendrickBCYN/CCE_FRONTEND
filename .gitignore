@@ -15,6 +15,7 @@ node_modules
 /client/build
 /client/dist
 /server/dist
+public/unity-build/Build/
 
 # ================================
 # ENVIRONMENT VARIABLES

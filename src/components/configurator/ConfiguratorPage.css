@@ -1,0 +1,18 @@
+.configurator-page {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: #1a1a2e;
+}
+
+.unity-container {
+  width: 100%;
+  height: 100%;
+}
+
+.unity-canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  outline: none;
+}
