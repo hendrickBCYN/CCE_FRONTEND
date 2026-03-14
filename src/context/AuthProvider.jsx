@@ -10,7 +10,6 @@ import authService from "../services/authService";
  *  2. Si oui, demande au backend s'il est encore valide
  *  3. Si valide → Restaure la session | Si invalide → nettoie le token
 */
-// ──── TEMPORAIRE POUR TEST ──────────────────────────────────
 export default function AuthProvider({ children }) {
   const [user, setUser] = useState(null); 
   const [token, setToken] = useState(localStorage.getItem("cce_token"));

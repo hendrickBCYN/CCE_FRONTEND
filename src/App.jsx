@@ -37,15 +37,6 @@ function App() {
                   </div>
                 </ProtectedRoute>
               }
-              /*
-              path="/configurator"
-              element={
-                <div style={{ padding: "2rem", textAlign: "center" }}>
-                  <h1>Configurateur</h1>
-                  <p>Le build Unity WebGL sera intégré ici.</p>
-                </div>
-              }
-              */
             />
 
             {/* Toute autre URL → login */}
