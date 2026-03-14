@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AuthContext from "./AuthContext";
 import authService from "../services/authService";
 
@@ -12,19 +12,11 @@ import authService from "../services/authService";
 */
 // ──── TEMPORAIRE POUR TEST ──────────────────────────────────
 export default function AuthProvider({ children }) {
-  // const [user, setUser] = useState(null); 
-  const [user, setUser] = useState({
-    email: "hendrickl.unity@gmail.com",
-    display_name: "Hendrick",
-    avatar_url: null,
-  });
-  // const [token, setToken] = useState(localStorage.getItem("cce_token"));
-  const [token, setToken] = useState("fake-token-for-testing");
-  // const [loading, setLoading] = useState(true);
-  // const [loading, setLoading] = useState(false);
+  const [user, setUser] = useState(null); 
+  const [token, setToken] = useState(localStorage.getItem("cce_token"));
+  const [loading, setLoading] = useState(true);
 
 
-  /* ──── TEMPORAIRE POUR TEST ──────────────────────────────────
   // Vérification du token au chargement
   useEffect(() => {
     const verifyToken = async () => {
@@ -42,11 +34,10 @@ export default function AuthProvider({ children }) {
     };
     verifyToken();
   }, [token]);
-  */
 
   /**
-   * Appelée après le consentement Google réussi.
-   * Envoie le credential au backend, stocke le JWT retourné.
+   Appelée après le consentement Google réussi.
+   Envoie le credential au backend, stocke le JWT retourné.
   */
   const loginWithGoogle = async (googleCredential) => {
     try {
@@ -73,7 +64,7 @@ export default function AuthProvider({ children }) {
       value={{
         user,
         token,
-        // loading,
+        loading,
         isAuthenticated: !!user && !!token,
         loginWithGoogle,
         logout,
