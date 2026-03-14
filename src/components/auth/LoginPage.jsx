@@ -5,17 +5,15 @@ import { useAuth } from "../../hooks/useAuth";
 import "./LoginPage.css";
 
 /**
- * Page d'authentification.
- *
- * Flux :
+ Page d'authentification.
+ Flux :
  *  1. L'utilisateur clique sur "Se connecter avec Google"
  *  2. Google affiche la popup de consentement
  *  3. Après consentement, Google retourne un credential (JWT)
  *  4. On envoie ce credential au backend via loginWithGoogle()
- *  5. Le backend vérifie auprès de Google, crée/retrouve l'utilisateur,
- *     et retourne notre propre JWT
+ *  5. Le backend vérifie auprès de Google, crée/retrouve l'utilisateur, et retourne notre propre JWT
  *  6. Redirection vers le configurateur
- */
+*/
 function LoginPage() {
   const { isAuthenticated, loginWithGoogle } = useAuth();
   const navigate = useNavigate();

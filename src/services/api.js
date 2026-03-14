@@ -3,10 +3,10 @@ import axios from "axios";
 const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3000/api";
 
 /**
- * Instance Axios préconfigurée.
- * - Injecte automatiquement le JWT dans chaque requête
- * - Redirige vers /login si le token est expiré (erreur 401)
- */
+ Instance Axios préconfigurée.
+ - Injecte automatiquement le JWT dans chaque requête
+ - Redirige vers /login si le token est expiré (erreur 401)
+*/
 const api = axios.create({
   baseURL: API_BASE_URL,
   headers: {

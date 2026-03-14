@@ -3,14 +3,13 @@ import AuthContext from "./AuthContext";
 import authService from "../services/authService";
 
 /**
- * Provider d'authentification.
- * Enveloppe l'application pour fournir l'état d'auth à tous les composants.
- *
- * Au montage :
+  Provider d'authentification.
+  Enveloppe l'application pour fournir l'état d'auth à tous les composants.
+ 
  *  1. Vérifie si un token existe dans le localStorage
  *  2. Si oui, demande au backend s'il est encore valide
- *  3. Si valide → restaure la session | Si invalide → nettoie le token
- */
+ *  3. Si valide → Restaure la session | Si invalide → nettoie le token
+*/
 // ──── TEMPORAIRE POUR TEST ──────────────────────────────────
 export default function AuthProvider({ children }) {
   // const [user, setUser] = useState(null); 
@@ -48,7 +47,7 @@ export default function AuthProvider({ children }) {
   /**
    * Appelée après le consentement Google réussi.
    * Envoie le credential au backend, stocke le JWT retourné.
-   */
+  */
   const loginWithGoogle = async (googleCredential) => {
     try {
       const { token: jwtToken, user: userData } = await authService.googleLogin(
