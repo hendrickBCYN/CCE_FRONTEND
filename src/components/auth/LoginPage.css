@@ -15,7 +15,7 @@
 }
 
 .login-card {
-  background: var(--color-surface);
+  background: rgb(252, 246, 244);
   border-radius: 12px;
   padding: 3rem 2.5rem;
   width: 100%;
@@ -40,8 +40,14 @@
 
 .login-subtitle {
   font-size: 0.95rem;
-  color: var(--color-text-muted);
+  color: rgb(50, 49, 48);
   line-height: 1.4;
+}
+
+.login-logo {
+  max-width: 85px;
+  height: auto;
+  margin-bottom: 0.5rem;
 }
 
 /* ─── Erreur ─────────────────────────────────────────────────── */
@@ -74,6 +80,6 @@
 
 .login-footer {
   font-size: 0.8rem;
-  color: var(--color-text-muted);
+  color: rgb(50, 49, 48);
   letter-spacing: 0.05em;
 }

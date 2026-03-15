@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { GoogleLogin } from "@react-oauth/google";
 import { useAuth } from "../../hooks/useAuth";
 import "./LoginPage.css";
+import logoBYCN from "../../assets/logoBYCN.png";
 
 /**
  Page d'authentification.
@@ -50,7 +51,7 @@ function LoginPage() {
       <div className="login-card">
         {/* En-tête */}
         <div className="login-header">
-          <h1 className="login-title">CCE</h1>
+          <img src={logoBYCN} alt="Bouygues Construction" className="login-logo" />
           <p className="login-subtitle">
             Configurateur de Chambre d'EHPAD
           </p>

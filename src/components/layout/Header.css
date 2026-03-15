@@ -4,8 +4,8 @@
   justify-content: space-between;
   height: var(--header-height);
   padding: 0 1.25rem;
-  background: var(--color-primary);
-  color: #ffffff;
+  background: rgb(252, 246, 244);
+  color: rgb(50, 49, 48);
   flex-shrink: 0;
 }
 
@@ -50,8 +50,8 @@
 
 .header-logout-btn {
   background: rgba(255, 255, 255, 0.12);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgb(50, 49, 48);
+  border: 1px solid rgb(50, 49, 48);
   border-radius: 6px;
   padding: 0.35rem 0.85rem;
   font-size: 0.8rem;
@@ -61,4 +61,8 @@
 
 .header-logout-btn:hover {
   background: rgba(255, 255, 255, 0.22);
+}
+
+.header-logout-btn:hover {
+  background: rgba(54, 115, 168, 0.197);
 }
