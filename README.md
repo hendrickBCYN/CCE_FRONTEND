@@ -2,7 +2,7 @@
 
 React web application serving as the interface for the **EHPAD Room Configurator (CCE)**, a tool for configuring medical facility rooms with Unity WebGL 3D visualization and PDF floor plan generation.
 
-> **CDA Context**: this project serves as the foundation for the *Concepteur Développeur d'Applications* professional certification (RNCP Level 6).
+**CDA Context**: this project serves as the foundation for the *Concepteur Développeur d'Applications* professional certification (RNCP Level 6).
 
 
 ## Tech Stack
@@ -131,4 +131,4 @@ In `dev` mode, Vite automatically proxies `/api` requests to the Express backend
 
 ## Related Project
 
-- **Backend**: [`cce-backend`](https://github.com/hendrickBCYN/CCE_BACKEND) — Node.js/Express API, MySQL 8.0, Sequelize ORM
+- **Backend**: [`CCE_BACKEND`](https://github.com/hendrickBCYN/CCE_BACKEND) — Node.js/Express API, MySQL 8.0, Sequelize ORM
