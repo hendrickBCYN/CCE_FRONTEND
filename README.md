@@ -36,7 +36,7 @@ cd CCE_FRONTEND
 npm install
 
 # Set up environment variables
-cp env.example .env
+cp .env.example .env
 # Fill in VITE_GOOGLE_CLIENT_ID and VITE_API_URL in .env
 ```
 
