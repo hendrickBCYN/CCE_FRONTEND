@@ -43,8 +43,10 @@ cp env.example .env
 
 ## Environment Variables
 
-`VITE_GOOGLE_CLIENT_ID`: Google OAuth 2.0 Client ID *(required)* 
-`VITE_API_URL`: Express backend API URL `http://localhost:3000/api` 
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `VITE_GOOGLE_CLIENT_ID` | Google OAuth 2.0 Client ID | *(required)* |
+| `VITE_API_URL` | Express backend API URL | `http://localhost:3000/api` |
 
 
 ## Available Scripts
