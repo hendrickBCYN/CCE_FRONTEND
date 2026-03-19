@@ -133,4 +133,4 @@ In `dev` mode, Vite automatically proxies `/api` requests to the Express backend
 
 ## Related Project
 
-- **Backend**: [`CCE_BACKEND`](https://github.com/hendrickBCYN/CCE_BACKEND) — Node.js/Express API, MySQL 8.0, Sequelize ORM
+- **Backend**: [`CCE_BACKEND`](https://github.com/hendrickBCYN/CCE_BACKEND)
