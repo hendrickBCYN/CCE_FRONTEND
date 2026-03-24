@@ -22,8 +22,14 @@ jobs:
       - name: Installation des dépendances
         run: npm ci
 
-      - name: Lint (ESLint)
+      - name: Lint 
         run: npm run lint
 
-      - name: Tests unitaires (Vitest)
+      - name: Tests unitaires 
         run: npm run test:run
+
+      - name: Build de production
+        run: npm run build
+
+      - name: Construction de l'image Docker
+        run: docker build -t cce-frontend .
