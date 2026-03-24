@@ -3,16 +3,16 @@ import { describe, it, expect, vi } from "vitest";
 import { MemoryRouter } from "react-router-dom";
 import ProtectedRoute from "../components/layout/ProtectedRoute";
 
-// Mock du hook useAuth
+// Simulate the use of the useAuth hook
 vi.mock("../hooks/useAuth", () => ({
   useAuth: vi.fn(),
 }));
 
 import { useAuth } from "../hooks/useAuth";
 
-// CAS 1 : Affichage du LoadingScreen pendant la vérification
-describe("ProtectedRoute : chargement", () => {
-  it("affiche le LoadingScreen pendant la vérification", () => {
+// CASE 1: LoadingScreen displayed during verification
+describe("ProtectedRoute: loading", () => {
+  it("Displays the LoadingScreen during verification", () => {
     useAuth.mockReturnValue({ isAuthenticated: false, loading: true });
 
     render(
@@ -30,9 +30,9 @@ describe("ProtectedRoute : chargement", () => {
   });
 });
 
-// CAS 2 : Redirection vers /login si non authentifié
-describe("ProtectedRoute : non authentifié", () => {
-  it("redirige vers /login si isAuthenticated est false", () => {
+// CASE 2: Redirect to /login if not authenticated
+describe("ProtectedRoute: Unauthenticated", () => {
+  it("Redirects to /login if isAuthenticated is false and isLoading is false", () => {
     useAuth.mockReturnValue({ isAuthenticated: false, loading: false });
 
     render(
@@ -47,9 +47,9 @@ describe("ProtectedRoute : non authentifié", () => {
   });
 });
 
-// CAS 3 : Affichage du composant enfant si authentifié
-describe("ProtectedRoute : authentifié", () => {
-  it("affiche le composant enfant si isAuthenticated est true", () => {
+// CASE 3: Displaying the child component if authenticated
+describe("ProtectedRoute: authenticated", () => {
+  it("Displays the child component if isAuthenticated is true and isLoading is false", () => {
     useAuth.mockReturnValue({ isAuthenticated: true, loading: false });
 
     render(
